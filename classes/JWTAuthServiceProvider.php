@@ -2,7 +2,7 @@
 
 use Config;
 
-class JWTAuthServiceProvider extends \Tymon\JWTAuth\Providers\JWTAuthServiceProvider
+class JWTAuthServiceProvider extends \Tymon\JWTAuth\Providers\LaravelServiceProvider
 {
 
     /**
@@ -16,5 +16,10 @@ class JWTAuthServiceProvider extends \Tymon\JWTAuth\Providers\JWTAuthServiceProv
         $val = Config::get('vdomah.jwtauth::' . $key);
 
         return $val ?: config("jwt.$key", $default);
+    }
+
+    protected function extendAuthGuard()
+    {
+
     }
 }

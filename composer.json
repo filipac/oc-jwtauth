@@ -13,7 +13,7 @@
   ],
   "require": {
     "php": ">=5.5.9",
-    "tymon/jwt-auth": "0.5.*"
+    "tymon/jwt-auth": "dev-develop"
   },
   "minimum-stability": "dev"
 }
